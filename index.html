@@ -3,271 +3,821 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Oud Al Ahyan Gifts Trading LLC</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Cormorant+Garamond:wght@400;500;600&family=Amiri&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --ink:#120d09;
-    --smoke:#1f1712;
-    --ember:#c9962f;
-    --ember-soft:#e6c983;
-    --ivory:#f1e6cf;
-    --ivory-dim:#cbbfa4;
-    --line: rgba(201,150,47,0.28);
-  }
-  *{box-sizing:border-box; margin:0; padding:0;}
-  html,body{
-    background:var(--ink);
-    color:var(--ivory);
-    font-family:'Cormorant Garamond', serif;
-    min-height:100%;
-    overflow-x:hidden;
-  }
-  body{
-    display:flex;
-    justify-content:center;
-    padding:56px 20px 40px;
-  }
-  .page{
-    width:100%;
-    max-width:440px;
-    position:relative;
-  }
 
-  /* ambient oud smoke */
-  .smoke-wrap{
+<title>Oud Al Ahyan | عود الأحيان</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Marcellus&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================================
+   OUD AL AHYAN — LIGHT LUXURY THEME
+========================================================= */
+
+:root{
+    --cream:#F5F0E6;
+    --cream-dark:#E9DFCE;
+    --brown:#3B2A1E;
+    --brown-light:#5A4030;
+    --gold:#C9A227;
+    --gold-dark:#A77E16;
+    --text:#2C2119;
+    --muted:#75685B;
+    --white:#FFFDF8;
+    --border:rgba(167,126,22,.30);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+    background:var(--cream);
+    color:var(--text);
+    font-family:'Cormorant Garamond',serif;
+    overflow-x:hidden;
+}
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+body::before{
+    content:"";
     position:fixed;
     inset:0;
     pointer-events:none;
-    z-index:0;
     background:
-      radial-gradient(ellipse at 50% -10%, rgba(201,150,47,0.14), transparent 55%),
-      radial-gradient(ellipse at 80% 100%, rgba(201,150,47,0.06), transparent 60%);
-  }
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(201,162,39,.08),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 90% 90%,
+            rgba(59,42,30,.07),
+            transparent 30%
+        );
+}
 
-  header{
+/* =========================================================
+   PAGE
+========================================================= */
+
+.page{
+    width:100%;
+    max-width:480px;
+    margin:auto;
     position:relative;
     z-index:1;
-    text-align:center;
-    margin-bottom:38px;
-  }
+    padding:25px 17px 30px;
+}
 
-  .seal{
-    width:88px;
-    height:88px;
-    margin:0 auto 18px;
-    border-radius:50%;
-    border:1px solid var(--line);
+/* =========================================================
+   HEADER
+========================================================= */
+
+header{
+    text-align:center;
+    padding-bottom:20px;
+}
+
+/* Actual Oud Al Ahyan logo */
+
+.logo{
+    width:220px;
+    max-width:75%;
+    height:auto;
+    display:block;
+    margin:0 auto 9px;
+}
+
+.brand-tagline{
     display:flex;
     align-items:center;
     justify-content:center;
-    position:relative;
-  }
-  .seal::before{
+    gap:10px;
+    color:var(--brown);
+    font-family:'Marcellus',serif;
+    font-size:13px;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+}
+
+.brand-tagline::before,
+.brand-tagline::after{
     content:"";
-    position:absolute;
-    inset:6px;
-    border-radius:50%;
-    border:1px solid rgba(201,150,47,0.5);
-  }
-  .seal span{
-    font-family:'Amiri', serif;
-    font-size:30px;
-    color:var(--ember-soft);
-    line-height:1;
-  }
+    width:27px;
+    height:1px;
+    background:var(--gold);
+}
 
-  h1{
-    font-family:'Marcellus', serif;
-    font-size:26px;
-    letter-spacing:0.06em;
-    color:var(--ivory);
-    text-transform:uppercase;
-  }
-  .arabic-name{
-    font-family:'Amiri', serif;
-    font-size:20px;
-    color:var(--ember-soft);
-    margin-top:6px;
+.arabic-tagline{
+    margin-top:3px;
+    font-family:'Amiri',serif;
+    font-size:18px;
+    color:var(--gold-dark);
     direction:rtl;
-  }
-  .tagline{
-    margin-top:14px;
-    font-size:15px;
-    letter-spacing:0.14em;
-    text-transform:uppercase;
-    color:var(--ivory-dim);
-  }
-  .tagline::before, .tagline::after{
-    content:"—";
-    color:var(--ember);
-    margin:0 10px;
-  }
+}
 
-  main{
-    position:relative;
-    z-index:1;
+/* =========================================================
+   INTRO
+========================================================= */
+
+.intro{
+    text-align:center;
+    margin:5px 0 19px;
+}
+
+.intro-title{
+    font-family:'Marcellus',serif;
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--gold-dark);
+}
+
+.intro-text{
+    margin-top:4px;
+    color:var(--muted);
+    font-size:15px;
+    line-height:1.35;
+}
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.actions{
     display:flex;
     flex-direction:column;
-    gap:14px;
-  }
+    gap:9px;
+}
 
-  a.link-card{
+/* General button */
+
+.action{
+    min-height:65px;
+    width:100%;
     display:flex;
     align-items:center;
-    gap:14px;
     text-decoration:none;
-    color:var(--ivory);
-    background:linear-gradient(180deg, rgba(201,150,47,0.06), rgba(201,150,47,0.02));
-    border:1px solid var(--line);
-    border-radius:2px;
-    padding:18px 20px;
-    transition:border-color .25s ease, background .25s ease, transform .2s ease;
-  }
-  a.link-card:hover{
-    border-color:var(--ember);
-    background:rgba(201,150,47,0.1);
-    transform:translateY(-1px);
-  }
-  a.link-card:focus-visible{
-    outline:2px solid var(--ember-soft);
-    outline-offset:3px;
-  }
-  .icon{
+    color:var(--text);
+
+    background:rgba(255,253,248,.82);
+
+    border:1px solid var(--border);
+    border-radius:10px;
+
+    padding:11px 15px;
+
+    box-shadow:
+        0 3px 12px rgba(59,42,30,.06);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        border-color .2s ease;
+}
+
+.action:hover{
+    transform:translateY(-2px);
+
+    border-color:var(--gold);
+
+    box-shadow:
+        0 7px 18px rgba(59,42,30,.11);
+}
+
+.action:active{
+    transform:scale(.99);
+}
+
+/* Icon */
+
+.icon{
+    width:38px;
+    height:38px;
+
+    flex-shrink:0;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-right:13px;
+
+    background:var(--brown);
+    color:#F6D77A;
+}
+
+.icon svg{
+    width:20px;
+    height:20px;
+}
+
+/* Text */
+
+.action-content{
+    flex:1;
+    min-width:0;
+}
+
+.action-title{
+    display:block;
+
+    font-family:'Marcellus',serif;
+    font-size:14px;
+    letter-spacing:.045em;
+    text-transform:uppercase;
+
+    color:var(--brown);
+}
+
+.action-arabic{
+    margin-left:7px;
+    font-family:'Amiri',serif;
+    font-size:16px;
+    direction:rtl;
+    color:var(--gold-dark);
+    text-transform:none;
+}
+
+.action-sub{
+    display:block;
+    margin-top:1px;
+
+    color:var(--muted);
+    font-size:14px;
+}
+
+.arrow{
+    font-family:Arial,sans-serif;
+    font-size:20px;
+    color:var(--gold-dark);
+    margin-left:8px;
+}
+
+/* =========================================================
+   LOCATION FEATURE
+========================================================= */
+
+.location{
+    position:relative;
+
+    background:
+        linear-gradient(
+            135deg,
+            #4A3325,
+            #342319
+        );
+
+    color:white;
+
+    border-radius:11px;
+
+    padding:15px;
+
+    border:1px solid rgba(201,162,39,.75);
+
+    box-shadow:
+        0 6px 18px rgba(59,42,30,.16);
+
+    margin-bottom:1px;
+}
+
+.location-top{
+    display:flex;
+    align-items:center;
+}
+
+.location-icon{
+    width:43px;
+    height:43px;
+
+    flex-shrink:0;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#F5F0E6;
+    color:var(--brown);
+
+    margin-right:13px;
+}
+
+.location-icon svg{
     width:22px;
     height:22px;
-    flex-shrink:0;
-    color:var(--ember-soft);
-  }
-  .icon svg{width:100%; height:100%;}
-  .link-text{flex:1;}
-  .link-label{
-    font-family:'Marcellus', serif;
-    font-size:15px;
-    letter-spacing:0.05em;
+}
+
+.location-content{
+    flex:1;
+}
+
+.location-title{
+    font-family:'Marcellus',serif;
+    font-size:16px;
+    letter-spacing:.045em;
     text-transform:uppercase;
-    color:var(--ivory);
-  }
-  .link-sub{
+}
+
+.location-arabic{
+    font-family:'Amiri',serif;
+    font-size:16px;
+    margin-left:7px;
+    color:#E8CA72;
+}
+
+.location-address{
+    margin-top:1px;
     font-size:14px;
-    color:var(--ivory-dim);
-    margin-top:2px;
-  }
-  .go{
-    font-size:18px;
-    color:var(--ember);
-    transform:translateX(0);
-    transition:transform .2s ease;
-  }
-  a.link-card:hover .go{ transform:translateX(3px); }
+    color:#D8CDBD;
+}
 
-  .locked{
-    opacity:0.55;
-    cursor:default;
-    pointer-events:none;
-  }
-  .locked .go{display:none;}
-  .badge{
-    font-size:11px;
-    letter-spacing:0.1em;
-    text-transform:uppercase;
-    color:var(--ember);
-    border:1px solid var(--line);
-    padding:3px 8px;
-    border-radius:2px;
-    white-space:nowrap;
-  }
+.maps-button{
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-  footer{
-    position:relative;
-    z-index:1;
-    text-align:center;
-    margin-top:36px;
+    min-height:43px;
+
+    margin-top:12px;
+
+    border-radius:7px;
+
+    background:#D1A92F;
+    color:#241810;
+
+    text-decoration:none;
+
+    font-family:'Marcellus',serif;
     font-size:13px;
-    letter-spacing:0.08em;
-    color:var(--ivory-dim);
-    opacity:0.7;
-  }
-  footer .line{
-    width:40px;
-    height:1px;
-    background:var(--line);
-    margin:0 auto 14px;
-  }
 
-  @media (prefers-reduced-motion: no-preference){
-    .seal span{ animation: glow 4s ease-in-out infinite; }
-    @keyframes glow{
-      0%,100%{ text-shadow:0 0 0 rgba(230,201,131,0); }
-      50%{ text-shadow:0 0 14px rgba(230,201,131,0.55); }
+    letter-spacing:.08em;
+    text-transform:uppercase;
+
+    transition:.2s ease;
+}
+
+.maps-button:hover{
+    background:#E4C762;
+}
+
+/* =========================================================
+   COLLECTION
+========================================================= */
+
+.collection{
+    margin-top:23px;
+    padding-top:16px;
+
+    border-top:1px solid rgba(167,126,22,.25);
+
+    text-align:center;
+}
+
+.collection-title{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+
+    font-family:'Marcellus',serif;
+    font-size:11px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+
+    color:var(--brown);
+}
+
+.collection-title::before,
+.collection-title::after{
+    content:"";
+    width:24px;
+    height:1px;
+    background:var(--gold);
+}
+
+.collection-arabic{
+    margin-top:2px;
+
+    font-family:'Amiri',serif;
+    font-size:17px;
+
+    color:var(--gold-dark);
+    direction:rtl;
+}
+
+.collection-list{
+    margin-top:9px;
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:5px 8px;
+
+    color:var(--muted);
+
+    font-size:13px;
+}
+
+.collection-list span:not(:last-child)::after{
+    content:" •";
+    color:var(--gold-dark);
+    margin-left:7px;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+    text-align:center;
+
+    margin-top:22px;
+
+    padding-top:15px;
+
+    border-top:1px solid rgba(167,126,22,.16);
+
+    color:var(--muted);
+
+    font-size:12px;
+
+    line-height:1.5;
+}
+
+.footer-name{
+    color:var(--brown-light);
+    font-weight:600;
+}
+
+.footer-location{
+    margin-top:2px;
+}
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media(max-width:360px){
+
+    .page{
+        padding-left:12px;
+        padding-right:12px;
     }
-  }
+
+    .logo{
+        width:195px;
+    }
+
+    .action{
+        min-height:61px;
+        padding:10px 12px;
+    }
+
+    .icon{
+        width:35px;
+        height:35px;
+        margin-right:10px;
+    }
+
+    .action-title{
+        font-size:13px;
+    }
+
+    .action-arabic{
+        font-size:15px;
+    }
+
+}
+
 </style>
 </head>
+
+
 <body>
-<div class="smoke-wrap"></div>
+
 <div class="page">
 
-  <header>
-    <div class="seal"><span>ع</span></div>
-    <h1>Oud Al Ahyan</h1>
-    <div class="arabic-name">عود الأحيان للهدايا والتجارة</div>
-    <p class="tagline">Oud of the Eras</p>
-  </header>
 
-  <main>
-    <a class="link-card" href="https://wa.me/971566555207" target="_blank" rel="noopener">
-      <span class="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.87 9.87 0 0 0 12.04 2zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.53 3.69-8.22 8.24-8.22 2.2 0 4.27.86 5.83 2.42a8.17 8.17 0 0 1 2.41 5.82c0 4.53-3.69 8.22-8.23 8.22zm4.51-6.16c-.25-.12-1.46-.72-1.69-.8-.23-.08-.39-.12-.56.12-.16.25-.64.8-.79.96-.14.16-.29.18-.54.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.16 0-.43.06-.65.31-.23.25-.85.83-.85 2.02s.87 2.35.99 2.51c.12.16 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.46-.6 1.66-1.17.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.29z"/></svg></span>
-      <span class="link-text">
-        <span class="link-label">WhatsApp</span>
-        <span class="link-sub">+971 56 655 5207</span>
-      </span>
-      <span class="go">→</span>
-    </a>
+<!-- =======================================================
+     HEADER
+======================================================== -->
 
-    <a class="link-card" href="tel:+971566555207">
-      <span class="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24 11.36 11.36 0 0 0 3.57.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.57 1 1 0 0 1-.25 1.01l-2.2 2.21z"/></svg></span>
-      <span class="link-text">
-        <span class="link-label">Call the Shop</span>
-        <span class="link-sub">+971 56 655 5207</span>
-      </span>
-      <span class="go">→</span>
-    </a>
+<header>
 
-    <a class="link-card" href="https://instagram.com/oudalahyan" target="_blank" rel="noopener">
-      <span class="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c2.72 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.46.66.26 1.22.6 1.77 1.15.55.55.9 1.11 1.15 1.77.24.64.41 1.37.46 2.43C21.99 8.94 22 9.28 22 12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.46 2.43a4.9 4.9 0 0 1-1.15 1.77 4.9 4.9 0 0 1-1.77 1.15c-.64.24-1.37.41-2.43.46C15.06 21.99 14.72 22 12 22s-3.06-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.46a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.24-.64-.41-1.37-.46-2.43C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.46-2.43.26-.66.6-1.22 1.15-1.77A4.9 4.9 0 0 1 5.44 2.53c.64-.24 1.37-.41 2.43-.46C8.94 2.01 9.28 2 12 2zm0 1.8c-2.67 0-2.99.01-4.04.06-.97.04-1.5.2-1.85.34-.47.18-.8.4-1.15.75-.35.35-.57.68-.75 1.15-.14.35-.3.88-.34 1.85C3.81 9 3.8 9.33 3.8 12s.01 2.99.06 4.04c.04.97.2 1.5.34 1.85.18.47.4.8.75 1.15.35.35.68.57 1.15.75.35.14.88.3 1.85.34 1.05.05 1.37.06 4.04.06s2.99-.01 4.04-.06c.97-.04 1.5-.2 1.85-.34.47-.18.8-.4 1.15-.75.35-.35.57-.68.75-1.15.14-.35.3-.88.34-1.85.05-1.05.06-1.37.06-4.04s-.01-2.99-.06-4.04c-.04-.97-.2-1.5-.34-1.85a3.1 3.1 0 0 0-.75-1.15 3.1 3.1 0 0 0-1.15-.75c-.35-.14-.88-.3-1.85-.34C14.99 3.81 14.67 3.8 12 3.8zm0 3.05a5.15 5.15 0 1 1 0 10.3 5.15 5.15 0 0 1 0-10.3zm0 1.8a3.35 3.35 0 1 0 0 6.7 3.35 3.35 0 0 0 0-6.7zm5.35-1.99a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/></svg></span>
-      <span class="link-text">
-        <span class="link-label">Instagram</span>
-        <span class="link-sub">@oudalahyan</span>
-      </span>
-      <span class="go">→</span>
-    </a>
+    <!-- YOUR ACTUAL LOGO -->
+    <img
+        src="logo.png"
+        alt="Oud Al Ahyan - عود الأحيان"
+        class="logo"
+    >
 
-    <a class="link-card" href="https://tiktok.com/@oudalahyan" target="_blank" rel="noopener">
-      <span class="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.82a4.28 4.28 0 0 1-3.19-1.44V4.3h-2.63v10.4a2.06 2.06 0 1 1-1.46-1.98v-2.7a4.7 4.7 0 0 0-.6-.04A4.76 4.76 0 1 0 13.5 14.5v-5.6a6.9 6.9 0 0 0 3.1.73V7.03a4.28 4.28 0 0 1-.9-.09v-1.12z"/></svg></span>
-      <span class="link-text">
-        <span class="link-label">TikTok</span>
-        <span class="link-sub">@oudalahyan</span>
-      </span>
-      <span class="go">→</span>
-    </a>
-
-    <div class="link-card locked">
-      <span class="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C7.03 2 3 6.03 3 11c0 5.25 7.11 10.28 8.13 10.98a1.5 1.5 0 0 0 1.74 0C13.89 21.28 21 16.25 21 11c0-4.97-4.03-9-9-9zm0 12a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg></span>
-      <span class="link-text">
-        <span class="link-label">Shop Location</span>
-        <span class="link-sub">Ajman, UAE — pin coming soon</span>
-      </span>
-      <span class="badge">Soon</span>
+    <div class="brand-tagline">
+        The Essence of Luxury
     </div>
-  </main>
 
-  <footer>
-    <div class="line"></div>
-    Oud Al Ahyan Gifts Trading LLC · Ajman, UAE
-  </footer>
+    <div class="arabic-tagline">
+        جوهر الفخامة
+    </div>
+
+</header>
+
+
+<!-- =======================================================
+     INTRO
+======================================================== -->
+
+<section class="intro">
+
+    <div class="intro-title">
+        Arabian Fragrance House
+    </div>
+
+    <div class="intro-text">
+        Oud • Bakhoor • Perfumes • Attar
+        <br>
+        Ajman, United Arab Emirates
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     ACTIONS
+======================================================== -->
+
+<main class="actions">
+
+
+<!-- ================= LOCATION ================= -->
+
+<section class="location">
+
+    <div class="location-top">
+
+        <div class="location-icon">
+
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C7.58 2 4 5.58 4 10c0 5.25 7.1 10.35 7.4 10.57a1 1 0 0 0 1.2 0C12.9 20.35 20 15.25 20 10c0-4.42-3.58-8-8-8zm0 11.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4z"/>
+            </svg>
+
+        </div>
+
+        <div class="location-content">
+
+            <div class="location-title">
+                Visit Our Store
+
+                <span class="location-arabic">
+                    زيارة متجرنا
+                </span>
+            </div>
+
+            <div class="location-address">
+                Ajman, United Arab Emirates
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- YOUR GOOGLE MAPS LOCATION -->
+
+    <a
+        class="maps-button"
+        href="https://maps.app.goo.gl/r5R4npSfdsb8i4ei8?g_st=ac"
+        target="_blank"
+        rel="noopener"
+    >
+        Get Directions
+    </a>
+
+</section>
+
+
+<!-- ================= WHATSAPP ================= -->
+
+<a
+    class="action"
+    href="https://wa.me/971566555207"
+    target="_blank"
+    rel="noopener"
+>
+
+    <span class="icon">
+
+        <svg viewBox="0 0 24 24" fill="currentColor">
+
+            <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.87 9.87 0 0 0 12.04 2zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.53 3.69-8.22 8.24-8.22 2.2 0 4.27.86 5.83 2.42a8.17 8.17 0 0 1 2.41 5.82c0 4.53-3.69 8.22-8.23 8.22zm4.51-6.16c-.25-.12-1.46-.72-1.69-.8-.23-.08-.39-.12-.56.12-.16.25-.64.8-.79.96-.14.16-.29.18-.54.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.16 0-.43.06-.65.31-.23.25-.85.83-.85 2.02s.87 2.35.99 2.51c.12.16 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.46-.6 1.66-1.17.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.29z"/>
+
+        </svg>
+
+    </span>
+
+    <span class="action-content">
+
+        <span class="action-title">
+            WhatsApp
+
+            <span class="action-arabic">
+                واتساب
+            </span>
+        </span>
+
+        <span class="action-sub">
+            +971 56 655 5207
+        </span>
+
+    </span>
+
+    <span class="arrow">→</span>
+
+</a>
+
+
+<!-- ================= CALL ================= -->
+
+<a
+    class="action"
+    href="tel:+971566555207"
+>
+
+    <span class="icon">
+
+        <svg viewBox="0 0 24 24" fill="currentColor">
+
+            <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24 11.36 11.36 0 0 0 3.57.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.57 1 1 0 0 1-.25 1.01l-2.2 2.21z"/>
+
+        </svg>
+
+    </span>
+
+    <span class="action-content">
+
+        <span class="action-title">
+            Call the Shop
+
+            <span class="action-arabic">
+                اتصل بالمتجر
+            </span>
+        </span>
+
+        <span class="action-sub">
+            +971 56 655 5207
+        </span>
+
+    </span>
+
+    <span class="arrow">→</span>
+
+</a>
+
+
+<!-- ================= INSTAGRAM ================= -->
+
+<a
+    class="action"
+    href="https://instagram.com/oudalahyan"
+    target="_blank"
+    rel="noopener"
+>
+
+    <span class="icon">
+
+        <svg viewBox="0 0 24 24" fill="currentColor">
+
+            <path d="M12 2c2.72 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.46.66.26 1.22.6 1.77 1.15.55.55.9 1.11 1.15 1.77.24.64.41 1.37.46 2.43C21.99 8.94 22 9.28 22 12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.46 2.43a4.9 4.9 0 0 1-1.15 1.77 4.9 4.9 0 0 1-1.77 1.15c-.64.24-1.37.41-2.43.46C15.06 21.99 14.72 22 12 22s-3.06-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.46a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.24-.64-.41-1.37-.46-2.43C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.46-2.43.26-.66.6-1.22 1.15-1.77A4.9 4.9 0 0 1 5.44 2.53c.64-.24 1.37-.41 2.43-.46C8.94 2.01 9.28 2 12 2z"/>
+
+        </svg>
+
+    </span>
+
+    <span class="action-content">
+
+        <span class="action-title">
+            Instagram
+
+            <span class="action-arabic">
+                إنستغرام
+            </span>
+        </span>
+
+        <span class="action-sub">
+            @oudalahyan
+        </span>
+
+    </span>
+
+    <span class="arrow">→</span>
+
+</a>
+
+
+<!-- ================= TIKTOK ================= -->
+
+<a
+    class="action"
+    href="https://tiktok.com/@oudalahyan"
+    target="_blank"
+    rel="noopener"
+>
+
+    <span class="icon">
+
+        <svg viewBox="0 0 24 24" fill="currentColor">
+
+            <path d="M16.6 5.82a4.28 4.28 0 0 1-3.19-1.44V4.3h-2.63v10.4a2.06 2.06 0 1 1-1.46-1.98v-2.7a4.7 4.7 0 0 0-.6-.04A4.76 4.76 0 1 0 13.5 14.5v-5.6a6.9 6.9 0 0 0 3.1.73V7.03a4.28 4.28 0 0 1-.9-.09v-1.12z"/>
+
+        </svg>
+
+    </span>
+
+    <span class="action-content">
+
+        <span class="action-title">
+            TikTok
+
+            <span class="action-arabic">
+                تيك توك
+            </span>
+        </span>
+
+        <span class="action-sub">
+            @oudalahyan
+        </span>
+
+    </span>
+
+    <span class="arrow">→</span>
+
+</a>
+
+
+</main>
+
+
+<!-- =======================================================
+     SMALL COLLECTION SECTION
+======================================================== -->
+
+<section class="collection">
+
+    <div class="collection-title">
+        Our Fragrance Collection
+    </div>
+
+    <div class="collection-arabic">
+        مجموعتنا من العطور
+    </div>
+
+    <div class="collection-list">
+
+        <span>Agarwood</span>
+        <span>Oud Oil</span>
+        <span>Bakhoor</span>
+        <span>Perfume</span>
+        <span>All Over Spray</span>
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     FOOTER
+======================================================== -->
+
+<footer>
+
+    <div class="footer-name">
+        Oud Al Ahyan Gifts Trading LLC
+    </div>
+
+    <div class="footer-location">
+        Ajman, United Arab Emirates
+    </div>
+
+</footer>
+
 
 </div>
+
 </body>
 </html>
