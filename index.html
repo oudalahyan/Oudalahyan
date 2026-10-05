@@ -6,24 +6,45 @@
 
   <title>Oud Al Ahyan | Ajman</title>
 
-  <meta name="description" content="Oud Al Ahyan Gifts Trading LLC — Arabian fragrances, Oud, Bakhoor, Oud Oils, Perfumes and All Over Sprays in Ajman, UAE.">
+  <meta
+    name="description"
+    content="Oud Al Ahyan Gifts Trading LLC — Oud, Oud Oils, Bakhoor, Perfumes and All Over Sprays in Ajman, UAE."
+  >
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+Arabic:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
 
   <style>
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
+    :root {
+      --cream: #f8f6f1;
+      --white: #ffffff;
+      --brown: #33271f;
+      --muted: #81766d;
+      --gold: #a4874c;
+      --line: #e6e0d7;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: "Inter", "Noto Sans Arabic", sans-serif;
-      background: #f7f4ee;
-      color: #2c211b;
+      background: var(--cream);
+      color: var(--brown);
+      font-family: "Inter", sans-serif;
       line-height: 1.6;
     }
 
@@ -32,344 +53,365 @@
       color: inherit;
     }
 
-    .container {
-      width: min(920px, calc(100% - 32px));
+    .page {
+      width: min(980px, calc(100% - 40px));
       margin: auto;
     }
 
-    /* HEADER */
+    /* ---------------- HEADER ---------------- */
 
     header {
-      background: #ffffff;
-      border-bottom: 1px solid #e9e2d8;
       padding: 28px 0;
+      background: var(--cream);
     }
 
-    .header-inner {
+    .header {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 25px;
+      align-items: center;
     }
 
     .logo {
-      width: 170px;
-      max-width: 42vw;
+      width: 155px;
       height: auto;
       display: block;
     }
 
-    .tagline {
+    .header-tagline {
       text-align: right;
     }
 
-    .tagline .english {
-      font-size: 13px;
+    .header-tagline .en {
+      font-size: 11px;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--gold);
       font-weight: 600;
-      letter-spacing: 1.5px;
-      color: #80662a;
     }
 
-    .tagline .arabic {
+    .header-tagline .ar {
+      margin-top: 2px;
       font-family: "Noto Sans Arabic", sans-serif;
-      font-size: 14px;
-      margin-top: 3px;
-      color: #5b4635;
+      font-size: 13px;
+      color: var(--muted);
     }
 
-    /* HERO */
+
+    /* ---------------- HERO ---------------- */
 
     .hero {
-      padding: 58px 0 40px;
       text-align: center;
-    }
-
-    .eyebrow {
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #92763a;
-      margin-bottom: 12px;
+      padding: 78px 20px 70px;
     }
 
     .hero h1 {
-      font-size: clamp(30px, 5vw, 48px);
-      line-height: 1.15;
-      font-weight: 600;
-      letter-spacing: -1px;
-      color: #2b2019;
-    }
-
-    .hero .arabic-title {
-      font-family: "Noto Sans Arabic", sans-serif;
-      font-size: clamp(22px, 4vw, 32px);
+      font-size: clamp(42px, 7vw, 72px);
+      line-height: 1;
       font-weight: 500;
-      color: #80662a;
-      margin-top: 8px;
+      letter-spacing: -2.5px;
+      color: var(--brown);
     }
 
-    .hero p {
-      max-width: 600px;
-      margin: 18px auto 0;
-      font-size: 15px;
-      color: #6d6259;
-    }
-
-    /* LOCATION */
-
-    .location {
-      margin: 20px auto 30px;
-      background: #ffffff;
-      border: 1px solid #e8dfd3;
-      border-radius: 18px;
-      padding: 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      box-shadow: 0 8px 25px rgba(50, 35, 20, 0.05);
-    }
-
-    .location-info {
-      text-align: left;
-    }
-
-    .location-label {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      font-weight: 700;
-      color: #9a7a39;
-      margin-bottom: 5px;
-    }
-
-    .location-title {
-      font-size: 18px;
-      font-weight: 600;
-      color: #2c211b;
-    }
-
-    .location-sub {
-      font-size: 13px;
-      color: #7b7067;
-      margin-top: 3px;
-    }
-
-    .map-button {
-      flex-shrink: 0;
-      background: #2f241d;
-      color: #ffffff;
-      padding: 12px 18px;
-      border-radius: 10px;
-      font-size: 13px;
-      font-weight: 600;
-      transition: 0.2s;
-    }
-
-    .map-button:hover {
-      background: #80662a;
-    }
-
-    /* CONTACTS */
-
-    .section-title {
-      text-align: center;
-      margin: 42px 0 18px;
-    }
-
-    .section-title h2 {
-      font-size: 20px;
-      font-weight: 600;
-      color: #2d211a;
-    }
-
-    .section-title p {
+    .hero-arabic {
       font-family: "Noto Sans Arabic", sans-serif;
-      font-size: 14px;
-      color: #8b7764;
-      margin-top: 2px;
+      font-size: clamp(24px, 4vw, 34px);
+      color: var(--gold);
+      margin-top: 12px;
+      font-weight: 400;
     }
 
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
+    .hero-line {
+      width: 42px;
+      height: 1px;
+      background: var(--gold);
+      margin: 25px auto;
     }
 
-    .contact-card {
-      background: #ffffff;
-      border: 1px solid #e8dfd3;
-      border-radius: 14px;
-      padding: 18px 12px;
-      text-align: center;
-      transition: 0.2s;
+    .hero-text {
+      max-width: 520px;
+      margin: auto;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.9;
     }
 
-    .contact-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(50, 35, 20, 0.06);
+
+    /* ---------------- STORE ---------------- */
+
+    .store {
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 34px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
     }
 
-    .contact-icon {
-      font-size: 20px;
+    .store-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
       margin-bottom: 7px;
     }
 
-    .contact-name {
+    .store-name {
+      font-size: 22px;
+      font-weight: 500;
+    }
+
+    .store-location {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .directions {
+      border: 1px solid var(--brown);
+      padding: 12px 22px;
+      font-size: 12px;
+      font-weight: 500;
+      white-space: nowrap;
+      transition: all .2s ease;
+    }
+
+    .directions:hover {
+      background: var(--brown);
+      color: white;
+    }
+
+
+    /* ---------------- CONTACT ---------------- */
+
+    .contact-section {
+      padding: 62px 0 20px;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .section-heading h2 {
+      font-size: 21px;
+      font-weight: 500;
+    }
+
+    .section-heading .arabic {
+      font-family: "Noto Sans Arabic", sans-serif;
       font-size: 13px;
-      font-weight: 600;
-      color: #33261e;
+      color: var(--muted);
+      margin-top: 3px;
     }
 
-    .contact-value {
-      font-size: 11px;
-      color: #887a6e;
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .contact-link {
+      padding: 18px 30px;
+      font-size: 13px;
+      color: var(--brown);
+      border-right: 1px solid var(--line);
+      transition: color .2s ease;
+    }
+
+    .contact-link:last-child {
+      border-right: none;
+    }
+
+    .contact-link:hover {
+      color: var(--gold);
+    }
+
+    .contact-link span {
+      display: block;
+      font-size: 10px;
+      color: var(--muted);
       margin-top: 2px;
-      word-break: break-word;
     }
 
-    /* COLLECTION */
+
+    /* ---------------- COLLECTION ---------------- */
 
     .collection {
-      margin-top: 42px;
+      padding: 70px 0 35px;
     }
 
-    .collection-list {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 10px;
-      margin-top: 18px;
-    }
-
-    .collection-item {
-      background: #fbfaf7;
-      border: 1px solid #e9e1d7;
-      border-radius: 12px;
-      padding: 14px 8px;
+    .collection-heading {
       text-align: center;
+      margin-bottom: 25px;
     }
 
-    .collection-number {
-      font-size: 10px;
-      color: #a18445;
-      font-weight: 700;
-      margin-bottom: 4px;
+    .collection-heading h2 {
+      font-size: 21px;
+      font-weight: 500;
     }
 
-    .collection-name {
-      font-size: 12px;
-      font-weight: 600;
-      color: #44352a;
-    }
-
-    .collection-arabic {
+    .collection-heading p {
       font-family: "Noto Sans Arabic", sans-serif;
-      font-size: 11px;
-      color: #8b7969;
-      margin-top: 2px;
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 3px;
     }
 
-    /* FOOTER */
+    .fragrances {
+      border-top: 1px solid var(--line);
+    }
+
+    .fragrance {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 4px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .fragrance-name {
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .fragrance-arabic {
+      font-family: "Noto Sans Arabic", sans-serif;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .fragrance-arrow {
+      color: var(--gold);
+      font-size: 16px;
+    }
+
+
+    /* ---------------- FOOTER ---------------- */
 
     footer {
       margin-top: 55px;
-      border-top: 1px solid #e5ddd3;
-      background: #ffffff;
-      padding: 25px 0;
+      border-top: 1px solid var(--line);
+      padding: 32px 0 38px;
       text-align: center;
     }
 
-    .footer-name {
+    .footer-brand {
       font-size: 13px;
-      font-weight: 600;
-      color: #403127;
+      font-weight: 500;
     }
 
     .footer-arabic {
       font-family: "Noto Sans Arabic", sans-serif;
       font-size: 12px;
-      color: #877668;
+      color: var(--muted);
       margin-top: 3px;
     }
 
     .footer-location {
       font-size: 11px;
-      color: #a09387;
-      margin-top: 6px;
+      color: #a19890;
+      margin-top: 8px;
     }
 
-    /* MOBILE */
 
-    @media (max-width: 700px) {
+    /* ---------------- MOBILE ---------------- */
 
-      .header-inner {
+    @media (max-width: 650px) {
+
+      .page {
+        width: min(100% - 28px, 980px);
+      }
+
+      header {
+        padding: 22px 0;
+      }
+
+      .header {
         flex-direction: column;
+        gap: 12px;
         text-align: center;
       }
 
-      .tagline {
+      .header-tagline {
         text-align: center;
+      }
+
+      .logo {
+        width: 145px;
       }
 
       .hero {
-        padding-top: 42px;
+        padding: 62px 10px 55px;
       }
 
-      .location {
+      .hero h1 {
+        letter-spacing: -1.5px;
+      }
+
+      .store {
+        padding: 27px 22px;
         flex-direction: column;
         text-align: center;
       }
 
-      .location-info {
-        text-align: center;
-      }
-
-      .map-button {
+      .directions {
         width: 100%;
         text-align: center;
       }
 
-      .contact-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .contact-links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
       }
 
-      .collection-list {
-        grid-template-columns: repeat(2, 1fr);
+      .contact-link {
+        text-align: center;
+        border-right: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        padding: 17px 10px;
       }
 
-      .collection-item:last-child {
-        grid-column: span 2;
+      .contact-link:nth-child(2n) {
+        border-right: none;
       }
+
+      .contact-link:nth-last-child(-n+2) {
+        border-bottom: none;
+      }
+
+      .collection {
+        padding-top: 55px;
+      }
+
+      .fragrance {
+        padding: 17px 2px;
+      }
+
+      .fragrance-name {
+        font-size: 14px;
+      }
+
+      .fragrance-arabic {
+        font-size: 11px;
+      }
+
     }
 
-    @media (max-width: 400px) {
-
-      .container {
-        width: min(100% - 22px, 920px);
-      }
-
-      .logo {
-        width: 150px;
-      }
-
-      .contact-grid {
-        gap: 8px;
-      }
-
-      .contact-card {
-        padding: 15px 8px;
-      }
-    }
   </style>
 </head>
+
 
 <body>
 
   <!-- HEADER -->
 
   <header>
-    <div class="container header-inner">
+    <div class="page header">
 
       <img
         src="logo.png"
@@ -377,9 +419,9 @@
         class="logo"
       >
 
-      <div class="tagline">
-        <div class="english">THE ESSENCE OF LUXURY</div>
-        <div class="arabic">جوهر الفخامة</div>
+      <div class="header-tagline">
+        <div class="en">The Essence of Luxury</div>
+        <div class="ar">جوهر الفخامة</div>
       </div>
 
     </div>
@@ -388,176 +430,173 @@
 
   <!-- HERO -->
 
-  <main>
+  <section class="hero">
 
-    <section class="hero">
-      <div class="container">
+    <h1>Oud Al Ahyan</h1>
 
-        <div class="eyebrow">Arabian Fragrance House</div>
+    <div class="hero-arabic">
+      عود الأحيان
+    </div>
 
-        <h1>Oud Al Ahyan</h1>
+    <div class="hero-line"></div>
 
-        <div class="arabic-title">
-          عود الأحيان
+    <p class="hero-text">
+      A refined selection of oud, bakhoor, perfume oils and fragrances,
+      brought together for those who appreciate beautiful scents.
+    </p>
+
+  </section>
+
+
+  <!-- STORE LOCATION -->
+
+  <section class="page">
+
+    <a
+      href="https://maps.app.goo.gl/r5R4npSfdsb8i4ei8?g_st=ac"
+      target="_blank"
+      class="store"
+    >
+
+      <div>
+
+        <div class="store-label">
+          Visit Our Store
         </div>
 
-        <p>
-          Discover Arabian fragrances crafted for everyday elegance,
-          special occasions and meaningful gifting.
-        </p>
+        <div class="store-name">
+          Oud Al Ahyan
+        </div>
+
+        <div class="store-location">
+          Ajman, United Arab Emirates
+        </div>
 
       </div>
-    </section>
+
+      <div class="directions">
+        Get Directions →
+      </div>
+
+    </a>
+
+  </section>
 
 
-    <!-- LOCATION -->
+  <!-- CONTACT -->
 
-    <div class="container">
+  <section class="page contact-section">
+
+    <div class="section-heading">
+      <h2>Connect With Us</h2>
+      <div class="arabic">تواصل معنا</div>
+    </div>
+
+    <div class="contact-links">
 
       <a
-        href="https://maps.app.goo.gl/r5R4npSfdsb8i4ei8?g_st=ac"
+        href="https://wa.me/971566555207"
         target="_blank"
-        class="location"
+        class="contact-link"
       >
+        WhatsApp
+        <span>+971 56 655 5207</span>
+      </a>
 
-        <div class="location-info">
+      <a
+        href="tel:+971566555207"
+        class="contact-link"
+      >
+        Call
+        <span>+971 56 655 5207</span>
+      </a>
 
-          <div class="location-label">
-            Visit Us
-          </div>
+      <a
+        href="https://instagram.com/oudalahyan"
+        target="_blank"
+        class="contact-link"
+      >
+        Instagram
+        <span>@oudalahyan</span>
+      </a>
 
-          <div class="location-title">
-            Oud Al Ahyan
-          </div>
-
-          <div class="location-sub">
-            Ajman, United Arab Emirates
-          </div>
-
-        </div>
-
-        <div class="map-button">
-          Get Directions →
-        </div>
-
+      <a
+        href="https://tiktok.com/@oudalahyan"
+        target="_blank"
+        class="contact-link"
+      >
+        TikTok
+        <span>@oudalahyan</span>
       </a>
 
     </div>
 
+  </section>
 
-    <!-- CONTACT -->
 
-    <section class="container">
+  <!-- COLLECTION -->
 
-      <div class="section-title">
-        <h2>Connect With Us</h2>
-        <p>تواصل معنا</p>
+  <section class="page collection">
+
+    <div class="collection-heading">
+      <h2>Our Fragrances</h2>
+      <p>مجموعتنا من العطور</p>
+    </div>
+
+    <div class="fragrances">
+
+      <div class="fragrance">
+        <div>
+          <div class="fragrance-name">Agarwood</div>
+          <div class="fragrance-arabic">العود الطبيعي</div>
+        </div>
+        <div class="fragrance-arrow">→</div>
       </div>
 
-      <div class="contact-grid">
-
-        <a
-          href="https://wa.me/971566555207"
-          target="_blank"
-          class="contact-card"
-        >
-          <div class="contact-icon">💬</div>
-          <div class="contact-name">WhatsApp</div>
-          <div class="contact-value">+971 56 655 5207</div>
-        </a>
-
-
-        <a
-          href="tel:+971566555207"
-          class="contact-card"
-        >
-          <div class="contact-icon">☎</div>
-          <div class="contact-name">Call</div>
-          <div class="contact-value">+971 56 655 5207</div>
-        </a>
-
-
-        <a
-          href="https://instagram.com/oudalahyan"
-          target="_blank"
-          class="contact-card"
-        >
-          <div class="contact-icon">◎</div>
-          <div class="contact-name">Instagram</div>
-          <div class="contact-value">@oudalahyan</div>
-        </a>
-
-
-        <a
-          href="https://tiktok.com/@oudalahyan"
-          target="_blank"
-          class="contact-card"
-        >
-          <div class="contact-icon">♪</div>
-          <div class="contact-name">TikTok</div>
-          <div class="contact-value">@oudalahyan</div>
-        </a>
-
+      <div class="fragrance">
+        <div>
+          <div class="fragrance-name">Oud Oil</div>
+          <div class="fragrance-arabic">دهن العود والمخلطات</div>
+        </div>
+        <div class="fragrance-arrow">→</div>
       </div>
 
-    </section>
-
-
-    <!-- COLLECTION -->
-
-    <section class="container collection">
-
-      <div class="section-title">
-        <h2>Our Fragrance Collection</h2>
-        <p>مجموعتنا من العطور</p>
+      <div class="fragrance">
+        <div>
+          <div class="fragrance-name">Bakhoor</div>
+          <div class="fragrance-arabic">البخور</div>
+        </div>
+        <div class="fragrance-arrow">→</div>
       </div>
 
-      <div class="collection-list">
-
-        <div class="collection-item">
-          <div class="collection-number">01</div>
-          <div class="collection-name">Agarwood</div>
-          <div class="collection-arabic">العود الطبيعي</div>
+      <div class="fragrance">
+        <div>
+          <div class="fragrance-name">Perfume</div>
+          <div class="fragrance-arabic">العطور</div>
         </div>
-
-        <div class="collection-item">
-          <div class="collection-number">02</div>
-          <div class="collection-name">Oud Oil</div>
-          <div class="collection-arabic">دهن العود والمخلطات</div>
-        </div>
-
-        <div class="collection-item">
-          <div class="collection-number">03</div>
-          <div class="collection-name">Bakhoor</div>
-          <div class="collection-arabic">البخور</div>
-        </div>
-
-        <div class="collection-item">
-          <div class="collection-number">04</div>
-          <div class="collection-name">Perfume</div>
-          <div class="collection-arabic">العطور</div>
-        </div>
-
-        <div class="collection-item">
-          <div class="collection-number">05</div>
-          <div class="collection-name">All Over Spray</div>
-          <div class="collection-arabic">بخاخ للجسم</div>
-        </div>
-
+        <div class="fragrance-arrow">→</div>
       </div>
 
-    </section>
+      <div class="fragrance">
+        <div>
+          <div class="fragrance-name">All Over Spray</div>
+          <div class="fragrance-arabic">بخاخ للجسم</div>
+        </div>
+        <div class="fragrance-arrow">→</div>
+      </div>
 
-  </main>
+    </div>
+
+  </section>
 
 
   <!-- FOOTER -->
 
   <footer>
 
-    <div class="container">
+    <div class="page">
 
-      <div class="footer-name">
+      <div class="footer-brand">
         Oud Al Ahyan Gifts Trading LLC
       </div>
 
@@ -572,6 +611,7 @@
     </div>
 
   </footer>
+
 
 </body>
 </html>
